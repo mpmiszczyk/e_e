@@ -21,4 +21,8 @@ should_calculate_area_of_ellipse_by_explicit_atom_test() ->
 should_throw_an_error_when_calling_fun_with_negative_numbers_test() ->
   ?assertError( function_clause,
                 geom:area( rectangle, -1, 0)).
+
+should_return_zero_on_any_unknown_shape_test() ->
+  ?assertEqual( 0,
+                geom:area( some_unknown_shape, 100, 99)).
   
