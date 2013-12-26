@@ -17,4 +17,8 @@ should_calculate_area_of_triangle__test() ->
 should_calculate_area_of_ellipse_by_explicit_atom_test() ->
   ?assertEqual( 25.132741228718345,
                 geom:area( ellipse, 2, 4)).
+
+should_throw_an_error_when_calling_fun_with_negative_numbers_test() ->
+  ?assertError( function_clause,
+                geom:area( rectangle, -1, 0)).
   

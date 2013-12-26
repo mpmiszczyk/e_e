@@ -8,11 +8,11 @@
 area( Lenght, Height ) ->
   Lenght * Height.
 
-area( rectangle, Lenght, Height ) ->
+area( rectangle, Lenght, Height ) when Lenght >= 0 andalso Height >= 0 ->
   area( Lenght, Height );
-area( triangle, Lenght, Height ) ->
+area( triangle, Lenght, Height ) when Lenght >= 0 andalso Height >= 0->
   Lenght * Height / 2;
-area( ellipse, Lenght, Height) ->
+area( ellipse, Lenght, Height) when Lenght >= 0 andalso Height >= 0  ->
   math:pi() * Lenght * Height.
 
 
