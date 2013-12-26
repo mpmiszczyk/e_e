@@ -1,3 +1,6 @@
 # temp files created by emacs
-
 *.*~
+
+# compiled files
+ebin/
+
