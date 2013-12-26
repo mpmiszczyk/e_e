@@ -1,0 +1,20 @@
+-module(e03_test).
+
+-compile( export_all).
+
+-include_lib("eunit/include/eunit.hrl").
+
+
+should_calculate_area_of_rectangle_by_explicit_atom_test() ->
+  ?assertEqual( 12,
+                geom:area( rectangle, 3, 4)).
+
+
+should_calculate_area_of_triangle__test() ->
+  ?assertEqual( 7.5,
+                geom:area( triangle, 3, 5)).
+
+should_calculate_area_of_ellipse_by_explicit_atom_test() ->
+  ?assertEqual( 25.132741228718345,
+                geom:area( ellipse, 2, 4)).
+  
