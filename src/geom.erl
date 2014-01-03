@@ -8,18 +8,13 @@
 area( Lenght, Height ) ->
   Lenght * Height.
 
-area( {rectangle, Lenght, Height}) when Lenght >= 0 andalso Height >= 0 ->
-  area( Lenght, Height );
-
-area( {triangle, Lenght, Height}) when Lenght >= 0 andalso Height >= 0->
-  Lenght * Height / 2;
-
-area( {ellipse, Lenght, Height}) when Lenght >= 0 andalso Height >= 0  ->
-  math:pi() * Lenght * Height;
-
-area( {_UnknownShape, Lenght, Height}) when Lenght >= 0 andalso Height >= 0 ->
-  0.
-
+area( {Figure, Lenght, Height}) when Lenght >= 0 andalso Height >= 0 ->
+  case Figure of
+    rectangle -> Lenght * Height;
+    triangle -> Lenght * Height /2;
+    elliprs ->   math:pi() * Lenght * Height;
+    _Unknown -> 0
+  end.
 
 
 
