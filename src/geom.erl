@@ -6,7 +6,7 @@
 
 
 area( Lenght, Height ) ->
-  Lenght * Height.
+  area({rectangle, Lenght,  Height}).
 
 area( {Figure, Lenght, Height}) when Lenght >= 0 andalso Height >= 0 ->
   case Figure of
